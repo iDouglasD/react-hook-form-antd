@@ -8,8 +8,8 @@ import { InputSelect } from '../../components/Inputs/InputSelect'
 import { ErrorMsg } from '../../components/ErrorMsg'
 
 const newUserFormValidationSchema = zod.object({
-  name: zod.string({ required_error: "Name is required" }),
-  role: zod.string({ required_error: "Role is required" }),
+  name: zod.string({ required_error: "Name is required" }).min(1, { message: "Name is required" }),
+  role: zod.string({ required_error: "Role is required" }).min(1, { message: "Role is required" }),
   email: zod.string({ required_error: "Email is required" }).email({ message: "Invalid email address" }),
   email_confirmation: zod.string({ required_error: "Email confirmation is required" }).email({ message: "Invalid email address" })
 }).refine((fildsData) => fildsData.email === fildsData.email_confirmation, {
@@ -40,6 +40,8 @@ export const Home = () => {
             title="Full name"
             control={control}
             name="name"
+            size="large"
+
           />
           {errors.name?.message && (
             <ErrorMsg msg={errors.name.message} />
@@ -47,6 +49,8 @@ export const Home = () => {
         </Col>
         <Col xs={20} md={8} span={3}>
           <InputSelect
+            className="w-full"
+            size="large"
             control={control}
             name="role"
             placeholder="Select a role"
@@ -65,6 +69,7 @@ export const Home = () => {
             title="Enter your email"
             control={control}
             name="email"
+            size="large"
           />
           {errors.email?.message && (
             <ErrorMsg msg={errors.email.message} />
@@ -76,6 +81,7 @@ export const Home = () => {
             title="Confirm your email"
             control={control}
             name="email_confirmation"
+            size="large"
           />
           {errors.email_confirmation?.message && (
             <ErrorMsg msg={errors.email_confirmation.message} />
