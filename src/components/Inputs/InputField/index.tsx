@@ -19,7 +19,6 @@ export function InputField({
         <Input
           {...rest}
           {...field}
-          size="large"
         />
       )}
     />

@@ -38,8 +38,6 @@ export const InputSelect = ({
           {...field}
           showSearch
           filterOption={filterOptions}
-          className="w-full"
-          size="large"
           options={options}
         />
       )}
