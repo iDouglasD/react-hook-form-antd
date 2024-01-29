@@ -14,7 +14,7 @@ This repository provides a practical example of implementing a React form with R
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/iDouglasD/react-form-vite-antd-example.git
+    git clone https://github.com/iDouglasD/react-hook-form-antd.git
     ```
 
 2. Navigate into the project directory:
