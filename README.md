@@ -1,4 +1,4 @@
-# React Form with Vite, React Hook Form, Zod, and Ant Design Example
+# React Form with Vite, React Hook Form, Zod, and Ant Design
 
 This repository provides a practical example of implementing a React form with React Hook Form, Zod, and Ant Design using Vite for quick and efficient development setup.
 
@@ -20,7 +20,7 @@ This repository provides a practical example of implementing a React form with R
 2. Navigate into the project directory:
 
     ```bash
-    cd react-form-vite-antd-example
+    cd react-hook-form-antd
     ```
 
 3. Install dependencies:
